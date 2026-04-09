@@ -17,7 +17,7 @@ body {
 .tile {
   width: 100px;
   height: 100px;
-  background: #222;
+  background: #149cbe;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,10 +28,10 @@ body {
 }
 
 .tile:hover {
-  background: #444;
+  background: #800e76;
 }
 
 .empty {
-  background: black;
+  background: rgb(72, 9, 155);
   cursor: default;
 }
