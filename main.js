@@ -1,5 +1,5 @@
 import { tiles, swapTiles } from "./state.js";
-import { isAdjacent } from "./utils.js";
+import { isAdjacent } from "./util.js";
 import { render } from "./render.js";
 
 const grid = document.getElementById("grid");
