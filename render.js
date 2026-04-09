@@ -1,18 +1,20 @@
-function render() {
-  const puzzle = document.getElementById("puzzle");
-  puzzle.innerHTML = "";
+import { tiles } from "./state.js";
+import { moveTile } from "./main.js";
 
-  board.forEach((value, index) => {
-    const tile = document.createElement("div");
-    tile.classList.add("tile");
+export function render(grid) {
+  grid.innerHTML = "";
+
+  tiles.forEach((value, index) => {
+    const div = document.createElement("div");
+    div.classList.add("tile");
 
     if (value === null) {
-      tile.classList.add("empty");
+      div.classList.add("empty");
     } else {
-      tile.textContent = value;
-      tile.addEventListener("click", () => moveTile(index));
+      div.textContent = value;
+      div.addEventListener("click", () => moveTile(index));
     }
 
-    puzzle.appendChild(tile);
+    grid.appendChild(div);
   });
 }
